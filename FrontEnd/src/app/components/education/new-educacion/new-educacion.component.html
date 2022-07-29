@@ -1,0 +1,24 @@
+<div class="login-box">
+    <h2>Añadir Educación</h2>
+    <form #f="ngForm" (ngSubmit)="onCreate()" novalidate>
+      <div class="user-box">
+        <input type="text" id="tituloEd" [(ngModel)]="tituloEd" name="tituloEd" requiered>
+        <label for="tituloEd">Estudio</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="subtituloEd" [(ngModel)]="subtituloEd" name="subtituloEd" requiered>
+        <label for="subtituloEd">Institucion Acadeémica</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="descripcionEd" [(ngModel)]="descripcionEd" name="descripcionEd" requiered>
+        <label for="descripcionEd">Descripción</label>
+      </div>
+      <button type= "submit">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Añadir
+      </button>
+    </form>
+  </div>

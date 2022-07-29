@@ -3,30 +3,34 @@
     <span class="section__subtitle">Mi historia educativa</span>
 
     
-    <!--<div class="education__container container grid">
-        <div *ngFor = "let education of educations">
-            <div class="education__content"[ngClass]="{'education__open':education.education__open==true, 'education__close':education.education__open==false}">
-                <div class="education__header" (click)="education.education__open=!education.education__open">
-                    <i class={{education.icon}}></i>
-
+    <div class="education__container container grid">
+        <div *ngFor = "let Educacion of educ">
+            <div class="education__content education__open"[ngClass]="{'education__open':Educacion.educacion__open==true, 'education__close':Educacion.educacion__open==false}">
+                <div class="education__header" (click)="Educacion.educacion__open=!Educacion.educacion__open">
+                    <i class="uil uil-hard-hat education__icon"></i>
                     <div>
-                        <h1 class="education__title">{{education.education__title}}</h1>
-                        <span class="education__subtitle">{{education.education__subtitle}}</span>
+                        <h1 class="education__title">{{Educacion.tituloEd}}</h1>
+                        <span class="education__subtitle">{{Educacion.subtituloEd}}</span>
                     </div>
 
                     <i class="uil uil-angle-down education__arrow"></i>
                 </div>
                 <div class="education__description grid">
-                    <p class="education__descriptions">{{education.education__description}}</p>
-                    <h5>Años</h5>
-                    
-                    <i class="uil uil-trash-alt" (click)="deleteEducation(education)"></i>
-                </div>
-                
+                    <p class="education__descriptions">{{Educacion.descripcionEd}}</p>
+                    <div class="description__icons" *ngIf="isLogged">
+                        <button class="btn edit" *ngIf="isLogged" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="uil uil-edit" ></i>
+                        </button>
+                        <button class="btn delete" *ngIf="isLogged" (click)="onDelete(Educacion.id)">
+                            <i class="uil uil-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>  
             </div>
         </div>
-        <app-add-education></app-add-education>
+        <button class="btn" routerLink="/newedu" *ngIf="isLogged">
+            <i class="uil uil-plus"></i>
+        </button>
     </div>
--->
 </section>
 

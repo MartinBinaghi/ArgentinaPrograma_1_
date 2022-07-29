@@ -1,0 +1,24 @@
+<div class="login-box" *ngIf="educ">
+    <h2>Editar Experiencia Laboral</h2>
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <div class="user-box">
+        <input type="text" id="tituloEd" [(ngModel)]="educ.tituloEd" name="tituloEd" requiered>
+        <label for="tituloEd">Estudio</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="subtituloEd" [(ngModel)]="educ.subtituloEd" name="subtituloEd" requiered>
+        <label for="subtituloEd">Universidad</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="descripcionEd" [(ngModel)]="educ.descripcionEd" name="descripcionEd" requiered>
+        <label for="descripcionEd">Descripcion</label>
+      </div>
+      <button type= "submit">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Actualizar
+      </button>
+    </form>
+  </div>
