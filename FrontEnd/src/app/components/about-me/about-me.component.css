@@ -23,11 +23,6 @@
     color: var(--first-color-alt);
 }
 
-/*.about-me__blob{
-    width: 200px;
-    fill: var(--first-color);
-}*/
-
 .about-me__img{
     display: flex;
     width: 300px;
@@ -92,6 +87,49 @@
     max-width:25rem;
 }
 
+.btn {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 1.5rem;
+    background-color: var(--first-color);
+    color: #fff;
+    border: none;
+    padding: 5px 5px;
+    margin: 0.5rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: inherit;
+}
+.btn:focus {
+    outline: none;
+}
+.btn:active {
+    transform: scale(0.98);
+}
+.btn:hover {
+    background-color: var(--first-color-alt);
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.description__icons{
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit{
+    display: flex;
+}
+
 @media screen and (max-width: 375px){
     .about-me__content{
         grid-template-columns: .25fr 3fr;
@@ -134,7 +172,7 @@
 
 @media screen and (min-width: 768px){
     .about-me__container{
-        row-gap: 5rem;
+        row-gap: 1rem;
     }
     
     .about-me__content{

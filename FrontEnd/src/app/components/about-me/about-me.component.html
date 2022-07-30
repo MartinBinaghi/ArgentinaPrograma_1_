@@ -34,6 +34,11 @@
                 </a>
             </div>
         </div>
+        <div class="description__icons" *ngIf="isLogged">
+            <button class="btn edit" *ngIf="isLogged" routerLink="/editexp/{{'Experiencia.id'}}">
+                <i class="uil uil-edit" ></i>
+            </button>
+        </div>
         <div class="about-me__scroll">
             <a href="#education" class="about-me__scroll-button button--flex">
                 <i class="uil uil-mouse-alt about-me__scroll-mouse"></i>
