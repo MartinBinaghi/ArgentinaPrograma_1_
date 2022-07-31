@@ -163,3 +163,10 @@ body {
     bottom: 100%;
   }
 }
+
+@media screen and (max-width: 430px){
+
+  .login-box {
+    width: 90%;
+  }
+}

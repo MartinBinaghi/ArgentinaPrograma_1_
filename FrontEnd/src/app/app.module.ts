@@ -23,6 +23,7 @@ import { EditExperienciaComponent } from './components/experience/edit-experienc
 import { NewEducacionComponent } from './components/education/new-educacion/new-educacion.component';
 import { EditEducacionComponent } from './components/education/edit-educacion/edit-educacion.component';
 import { ChangeThemeComponent } from './components/nav-menu/change-theme/change-theme.component';
+import { EditAboutMeComponent } from './components/about-me/edit-about-me/edit-about-me.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ChangeThemeComponent } from './components/nav-menu/change-theme/change-
     NewEducacionComponent,
     EditEducacionComponent,
     ChangeThemeComponent,
+    EditAboutMeComponent,
   ],
   imports: [
     BrowserModule,
