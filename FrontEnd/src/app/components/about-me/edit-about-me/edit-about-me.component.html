@@ -1,4 +1,9 @@
 <div class="login-box" *ngIf="persona">
+  <div class="close__window">
+    <a class="btn close" routerLink="">
+      <i class="uil uil-times" ></i>
+    </a>
+  </div>
     <h2>Editar Experiencia Laboral</h2>
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
       <div class="user-box">
