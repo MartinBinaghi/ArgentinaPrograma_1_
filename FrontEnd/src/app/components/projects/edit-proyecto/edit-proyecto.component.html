@@ -1,0 +1,25 @@
+<div class="login-box" *ngIf="proyecto">
+    <div class="close__window">
+      <a class="btn close" routerLink="">
+        <i class="uil uil-times" ></i>
+      </a>
+    </div>
+      <h2>Editar proyecto</h2>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="user-box">
+          <input type="text" id="tituloP" [(ngModel)]="proyecto.tituloP" name="tituloP" requiered>
+          <label for="tituloP">Nombre</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="descripcionP" [(ngModel)]="proyecto.descripcionP" name="descripcionP" requiered>
+          <label for="descripcionP">Descripcion</label>
+        </div>
+        <button type= "submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Actualizar
+        </button>
+      </form>
+    </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { persona } from 'src/app/model/persona.model';
+import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
@@ -9,7 +9,8 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['./edit-about-me.component.css']
 })
 export class EditAboutMeComponent implements OnInit {
-  persona: persona = null;
+  //persona: persona = null;
+  persona: Persona = null;
 
   constructor(
     private personaService: PersonaService,
@@ -24,7 +25,7 @@ export class EditAboutMeComponent implements OnInit {
         this.persona = data;
       },
       (err) => {
-        alert('Error al editar experiencia 1');
+        alert('Error al editar educacion 1');
         this.router.navigate(['']);
       }
     );
@@ -32,13 +33,13 @@ export class EditAboutMeComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    console.log(this.persona);
+    
     this.personaService.update(id, this.persona).subscribe({
       next: (data) => {
         this.router.navigate(['']);
       },
       error: (err) => {
-        alert('Error al editar experiencia 2');
+        alert('Error al editar educacion 2');
         this.router.navigate(['']);
       },
     });

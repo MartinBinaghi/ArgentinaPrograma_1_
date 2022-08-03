@@ -24,6 +24,9 @@ import { NewEducacionComponent } from './components/education/new-educacion/new-
 import { EditEducacionComponent } from './components/education/edit-educacion/edit-educacion.component';
 import { ChangeThemeComponent } from './components/nav-menu/change-theme/change-theme.component';
 import { EditAboutMeComponent } from './components/about-me/edit-about-me/edit-about-me.component';
+import { NewAboutMeComponent } from './components/about-me/new-about-me/new-about-me.component';
+import { EditProyectoComponent } from './components/projects/edit-proyecto/edit-proyecto.component';
+import { NewProyectoComponent } from './components/projects/new-proyecto/new-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,9 @@ import { EditAboutMeComponent } from './components/about-me/edit-about-me/edit-a
     EditEducacionComponent,
     ChangeThemeComponent,
     EditAboutMeComponent,
+    NewAboutMeComponent,
+    EditProyectoComponent,
+    NewProyectoComponent,
   ],
   imports: [
     BrowserModule,

@@ -20,9 +20,9 @@
                 <img src="assets/img/1643136008290 (1).png" alt="" x="10" y ="1" class="about-me__blob-img">
             </div>
 
-            <div class="about-me__data">
+            <div *ngFor="let persona of persona" class="about-me__data">
                 <div class="about-me__text">
-                    <h1 class="about-me__title">Hola, soy {{persona.nombre}}</h1>
+                    <h1 class="about-me__title"> Hola! soy {{persona.nombre}}</h1>
                     <h3 class="about-me_subtitle">Desarrollador full stack jr.</h3>
                     <p class="about-me__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est molestias accusamus, architecto dignissimos saepe dicta maiores iure tenetur ipsa officia omnis soluta veritatis totam nulla, voluptatum asperiores minima eius modi!</p>
                 </div>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="description__icons" *ngIf="isLogged">
-            <button class="btn edit" *ngIf="isLogged" routerLink="/editpersona/{{persona.id}}">
+            <button class="btn edit" *ngIf="isLogged" routerLink="editpersona/:id">
                 <i class="uil uil-edit" ></i>
             </button>
         </div>
