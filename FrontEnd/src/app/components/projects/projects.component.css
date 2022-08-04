@@ -5,6 +5,7 @@
 
 .project__content {
     padding: 0 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .project__img{
@@ -20,7 +21,9 @@
 }
 
 .project__description{
-    margin-bottom: var(--mb-0-75);
+    display: flex;
+    flex-direction: column;
+    height: 87%;
 }
 
 .project__button:hover .button__icon{
@@ -76,6 +79,14 @@
 
 .delete:hover {
     background-color: darkred;
+}
+
+.add{
+    margin:1rem 2.5rem;
+}
+
+.project__data{
+    margin:0rem 1rem;
 }
 
 @media screen and (max-width: 350px) {

@@ -8,17 +8,19 @@
     
                 <div class="project__data">
                     <h3 class="project__title">{{Proyecto.tituloP}}</h3>
-                    <p class="project__description">{{Proyecto.descripcionP}}</p>
-                    <div class="description__icons" *ngIf="isLogged">
-                        <a class="btn edit" href="{{Proyecto.linkP}}">
-                            <i class="uil uil-github" ></i>
-                        </a>
-                        <button class="btn edit" *ngIf="isLogged" routerLink="/editproyecto/{{Proyecto.id}}">
-                            <i class="uil uil-edit" ></i>
-                        </button>
-                        <button class="btn delete" *ngIf="isLogged" (click)="onDelete(Proyecto.id)">
-                            <i class="uil uil-trash-alt"></i>
-                        </button>
+                    <div class="project__description">
+                        <p class="project__description">{{Proyecto.descripcionP}}</p>
+                        <div class="description__icons" *ngIf="isLogged">
+                            <a class="btn edit" href="{{Proyecto.linkP}}">
+                                <i class="uil uil-github" ></i>
+                            </a>
+                            <button class="btn edit" *ngIf="isLogged" routerLink="/editproyecto/{{Proyecto.id}}">
+                                <i class="uil uil-edit" ></i>
+                            </button>
+                            <button class="btn delete" *ngIf="isLogged" (click)="onDelete(Proyecto.id)">
+                                <i class="uil uil-trash-alt"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -35,7 +37,7 @@
                 </div>
             </div>-->
         </div>
-        <button class="btn" routerLink="/newproyecto" *ngIf="isLogged">
+        <button class="btn add" routerLink="/newproyecto" *ngIf="isLogged">
             <i class="uil uil-plus"></i>
         </button>
     </div>
