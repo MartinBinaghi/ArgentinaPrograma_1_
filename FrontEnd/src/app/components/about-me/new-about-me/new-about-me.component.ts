@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Persona } from 'src/app/model/persona.model';
-import { PersonaService } from '../../../services/persona.service';
+import { AboutMe } from 'src/app/model/about-me';
+import { AboutMeService } from 'src/app/services/about-me.service';
 
 @Component({
   selector: 'app-new-about-me',
@@ -10,24 +10,25 @@ import { PersonaService } from '../../../services/persona.service';
 })
 export class NewAboutMeComponent implements OnInit {
 
-  nombre: string = '';
-  apellido: string = '';
-  img: string = '';
+  nombreA: string = '';
+  titularA: string = '';
+  descripcionA: string = '';
+  imgA: string = '';
 
-  constructor(private personaService: PersonaService, private router: Router) { }
+  constructor(private aboutMeService: AboutMeService, private router: Router) { }
 
   ngOnInit(): void {
     
   }
 
   onCreate(): void {
-    const pers = new Persona(this.nombre, this.apellido, this.img);
-    this.personaService.save(pers).subscribe(data => {
+    const pers = new AboutMe(this.nombreA, this.titularA, this.descripcionA, this.imgA);
+    this.aboutMeService.save(pers).subscribe(data => {
       alert('Persona añadida correctamente');
       this.router.navigate(['']);
     }, err => {
       alert('Error al añadir persona')
-      this.router.navigate(['newpers']);
+      this.router.navigate(['newabt']);
     });
   }
 }

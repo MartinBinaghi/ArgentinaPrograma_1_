@@ -1,14 +1,26 @@
-<div class="login-box" *ngIf="persona">
+<div class="login-box" *ngIf="about">
   <div class="close__window">
     <a class="btn close" routerLink="">
       <i class="uil uil-times" ></i>
     </a>
   </div>
-    <h2>Editar Experiencia Laboral</h2>
+    <h2>Editar About Me</h2>
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
       <div class="user-box">
-        <input type="text" id="nombre" [(ngModel)]="persona.nombre" name="nombre" requiered>
+        <input type="text" id="nombre" [(ngModel)]="about.nombreA" name="nombre" requiered>
         <label for="nombre">Cargo</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="titularA" [(ngModel)]="about.titularA" name="titularA" requiered>
+        <label for="titularA">Titular</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="descripcionA" [(ngModel)]="about.descripcionA" name="descripcionA" requiered>
+        <label for="descripcionA">Descripcion</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="imgA" [(ngModel)]="about.imgA" name="imgA" requiered>
+        <label for="imgA">Imagen</label>
       </div>
       <button type= "submit">
         <span></span>

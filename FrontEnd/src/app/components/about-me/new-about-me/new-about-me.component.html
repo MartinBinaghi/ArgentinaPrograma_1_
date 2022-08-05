@@ -1,1 +1,33 @@
-<p>new-about-me works!</p>
+<div class="login-box">
+    <div class="close__window">
+      <a class="btn close" routerLink="">
+        <i class="uil uil-times" ></i>
+      </a>
+    </div>
+      <h2>Añadir About Me</h2>
+      <form #f="ngForm" (ngSubmit)="onCreate()" novalidate>
+        <div class="user-box">
+          <input type="text" id="nombreA" [(ngModel)]="nombreA" name="nombreA" requiered>
+          <label for="nombreA">Nombre</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="titularA" [(ngModel)]="titularA" name="titularA" requiered>
+          <label for="titularA">Titular</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="descripcionA" [(ngModel)]="descripcionA" name="descripcionA" requiered>
+          <label for="descripcionA">Descripcion</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="imgA" [(ngModel)]="imgA" name="imgA" requiered>
+          <label for="imgA">Imagen</label>
+        </div>
+        <button type= "submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Añadir
+        </button>
+      </form>
+    </div>

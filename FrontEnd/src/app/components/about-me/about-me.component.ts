@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PersonaService } from 'src/app/services/persona.service';
 import { TokenService } from 'src/app/services/token.service'
-import { Persona } from 'src/app/model/persona.model';
+import { AboutMeService } from 'src/app/services/about-me.service';
+import { AboutMe } from 'src/app/model/about-me';
 
 @Component({
   selector: 'app-about-me',
@@ -10,15 +10,16 @@ import { Persona } from 'src/app/model/persona.model';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit {
-  persona: Persona[] = [];
+  //
   //pers:persona = new persona("","","");
+  about: AboutMe[] = [];
 
-  constructor(private personaService: PersonaService, private tokenService: TokenService) { }
+  constructor(private aboutMeService: AboutMeService, private tokenService: TokenService) { }
   
   isLogged = false;
 
   ngOnInit(): void {
-    this.cargarPersona();
+    this.cargarAboutMe();
     
     if (this.tokenService.getToken()) {
       this.isLogged = true;
@@ -27,7 +28,7 @@ export class AboutMeComponent implements OnInit {
     }
   }
 
-  cargarPersona():void{
-    this.personaService.lista().subscribe(data => {this.persona = data;});
+  cargarAboutMe():void{
+    this.aboutMeService.lista().subscribe(data => {this.about = data;});
   }
 }
