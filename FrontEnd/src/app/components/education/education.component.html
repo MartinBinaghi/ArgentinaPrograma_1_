@@ -7,7 +7,7 @@
         <div *ngFor = "let Educacion of educ">
             <div class="education__content education__open"[ngClass]="{'education__open':Educacion.educacion__open==true, 'education__close':Educacion.educacion__open==false}">
                 <div class="education__header" (click)="Educacion.educacion__open=!Educacion.educacion__open">
-                    <i class="uil uil-hard-hat education__icon"></i>
+                    <img class="education__icon" src="assets/img/{{Educacion.imgEd}}.jpg">
                     <div>
                         <h1 class="education__title">{{Educacion.tituloEd}}</h1>
                         <span class="education__subtitle">{{Educacion.subtituloEd}}</span>
