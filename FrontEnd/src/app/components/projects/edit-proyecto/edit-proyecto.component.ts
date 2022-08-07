@@ -35,11 +35,12 @@ export class EditProyectoComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sProyecto.update(id, this.proyecto).subscribe({
       next: (data) => {
+        alert('Proyecto actualizado correctamente');
         this.router.navigate(['']);
       },
       error: (err) => {
         alert('Error al editar proyecto');
-        this.router.navigate(['']);
+        this.router.navigate(['newproyecto']);
       },
     });
   }

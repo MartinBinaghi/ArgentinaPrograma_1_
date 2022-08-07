@@ -25,7 +25,7 @@ export class EditAboutMeComponent implements OnInit {
         this.about = data;
       },
       (err) => {
-        alert('Error al editar about me 1');
+        alert('Error al editar persona');
         this.router.navigate(['']);
       }
     );
@@ -36,11 +36,12 @@ export class EditAboutMeComponent implements OnInit {
     
     this.aboutMeService.update(id, this.about).subscribe({
       next: (data) => {
+        alert('Persona actualizada correctamente');
         this.router.navigate(['']);
       },
       error: (err) => {
-        alert('Error al editar about me 2');
-        this.router.navigate(['']);
+        alert('Error al editar persona');
+        this.router.navigate(['newabt']);
       },
     });
   }

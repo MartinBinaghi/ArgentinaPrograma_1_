@@ -37,11 +37,12 @@ export class EditEducacionComponent implements OnInit {
     console.log(this.educ);
     this.sEducacion.update(id, this.educ).subscribe({
       next: (data) => {
+        alert('Educacion actualizada correctamente');
         this.router.navigate(['']);
       },
       error: (err) => {
         alert('Error al editar educacion');
-        this.router.navigate(['']);
+        this.router.navigate(['newedu']);
       },
     });
   }
