@@ -416,6 +416,8 @@ img {
 
 .experience__icon{
   margin-right:var(--mb-0-75);
+  width: 50px;
+  border-radius: 5px;
 }
 
 .experience__title{
@@ -433,7 +435,7 @@ img {
 }
 
 .experience__description{
-  padding-left: var(--mb-2-5);
+  padding-left: 3.5rem;
   margin-left: var(--mb-0-25);
 }
 
