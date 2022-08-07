@@ -2,7 +2,7 @@
     <div class="about-me__container container grid">
         <div class="about-me__content grid">
             <div class="about-me__social">
-                <a href="https://www.linkedin.com/in/martin-binaghi-5577a822b/" class="about-me__social-icon">
+                <a href="https://www.linkedin.com/in/martin-binaghi" class="about-me__social-icon">
                     <i class="uil uil-linkedin"></i>
                 </a>
                
@@ -17,7 +17,7 @@
 
             <div class="about-me__img">
                 <!--<image class="about-me__blob-img" x="10" y="1" href="assets/img/1643136008290 (1).png"/>-->
-                <img src="assets/img/Martin Binaghi.png" alt="" x="10" y ="1" class="about-me__blob-img">
+                <img *ngFor="let AboutMe of about" src="assets/img/{{AboutMe.imgA}}.png" alt="" x="10" y ="1" class="about-me__blob-img">
             </div>
 
             <div *ngFor="let AboutMe of about" class="about-me__data">

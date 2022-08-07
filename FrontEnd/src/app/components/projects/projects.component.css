@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     height: 87%;
+    word-break: break-word;
 }
 
 .project__button:hover .button__icon{
@@ -86,7 +87,7 @@
 }
 
 .project__data{
-    margin:0rem 1rem;
+    margin:0rem 1.5rem;
 }
 
 @media screen and (max-width: 350px) {

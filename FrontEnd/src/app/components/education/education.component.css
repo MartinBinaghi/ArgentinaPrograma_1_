@@ -44,6 +44,7 @@
   margin-top: -2rem;
   margin-bottom:1rem;
   font-size: var(--small-font-size);
+  word-break: break-word;
 }
 
 .education__close .education__description{
