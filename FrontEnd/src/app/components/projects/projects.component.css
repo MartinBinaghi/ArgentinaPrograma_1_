@@ -23,7 +23,7 @@
 .project__description{
     display: flex;
     flex-direction: column;
-    height: 87%;
+    height: 90%;
     word-break: break-word;
 }
 

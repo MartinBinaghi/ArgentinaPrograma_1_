@@ -1,0 +1,25 @@
+<div class="login-box">
+    <div class="close__window">
+      <a class="btn close" routerLink="">
+        <i class="uil uil-times" ></i>
+      </a>
+    </div>
+      <h2>Añadir Educación</h2>
+      <form #f="ngForm" (ngSubmit)="onCreate()" novalidate>
+        <div class="user-box">
+          <input type="text" id="tituloS" [(ngModel)]="tituloS" name="tituloS" requiered>
+          <label for="tituloS">Nombre</label>
+        </div>
+        <div class="user-box">
+          <input type="number" id="porcentajeS" [(ngModel)]="porcentajeS" name="porcentajeS" requiered>
+          <label for="porcentajeS">Porcentaje</label>
+        </div>
+        <button type= "submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Añadir
+        </button>
+      </form>
+    </div>

@@ -3,11 +3,11 @@
     <span class="section__subtitle">Habilidades duras y blandas</span>
 
     <div class=" skills__container container grid">
-        <div class="row">
-            <div class= "circle__container">
+        <div class="row circle__container">
+            <div *ngFor="let Habilidad of habilidad" class= "circle__container">
                 <circle-progress
-                    [percent]="85"
-                    [title]="'HTML'"
+                    [percent]="Habilidad.porcentajeS"
+                    [title]="Habilidad.tituloS"
                     [showSubtitle]="false"
                     [radius]="100"
                     [outerStrokeWidth]="12"
@@ -18,8 +18,19 @@
                     [animation]="true"
                     [animationDuration]="600"
                 ></circle-progress>
+                <div class="description__icons" *ngIf="isLogged">
+                    <button class="btn edit" *ngIf="isLogged" routerLink="/editskill/{{Habilidad.id}}">
+                        <i class="uil uil-edit" ></i>
+                    </button>
+                    <button class="btn delete" *ngIf="isLogged" (click)="onDelete(Habilidad.id)">
+                        <i class="uil uil-trash-alt"></i>
+                    </button>
+                </div>
             </div>
-            <div class= "circle__container">
+            <button class="btn" routerLink="/newskill" *ngIf="isLogged">
+                <i class="uil uil-plus"></i>
+            </button>
+            <!--<div class= "circle__container">
                 <circle-progress
                     [percent]="85"
                     [radius]="100"
@@ -66,7 +77,7 @@
                     [animation]="true"
                     [animationDuration]="600"
                 ></circle-progress>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>

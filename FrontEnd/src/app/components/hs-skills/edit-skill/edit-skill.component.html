@@ -1,0 +1,25 @@
+<div class="login-box" *ngIf="habilidad">
+    <div class="close__window">
+      <a class="btn close" routerLink="">
+        <i class="uil uil-times" ></i>
+      </a>
+    </div>
+      <h2>Editar Experiencia Laboral</h2>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="user-box">
+          <input type="text" id="tituloS" [(ngModel)]="habilidad.tituloS" name="tituloS" requiered>
+          <label for="tituloS">Nombre</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="porcentajeS" [(ngModel)]="habilidad.porcentajeS" name="porcentajeS" requiered>
+          <label for="porcentajeS">Porcentaje</label>
+        </div>
+        <button type= "submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Actualizar
+        </button>
+      </form>
+    </div>

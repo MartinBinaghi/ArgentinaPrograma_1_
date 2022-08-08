@@ -27,6 +27,8 @@ import { EditAboutMeComponent } from './components/about-me/edit-about-me/edit-a
 import { NewAboutMeComponent } from './components/about-me/new-about-me/new-about-me.component';
 import { EditProyectoComponent } from './components/projects/edit-proyecto/edit-proyecto.component';
 import { NewProyectoComponent } from './components/projects/new-proyecto/new-proyecto.component';
+import { NewSkillComponent } from './components/hs-skills/new-skill/new-skill.component';
+import { EditSkillComponent } from './components/hs-skills/edit-skill/edit-skill.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { NewProyectoComponent } from './components/projects/new-proyecto/new-pro
     NewAboutMeComponent,
     EditProyectoComponent,
     NewProyectoComponent,
+    NewSkillComponent,
+    EditSkillComponent,
   ],
   imports: [
     BrowserModule,
