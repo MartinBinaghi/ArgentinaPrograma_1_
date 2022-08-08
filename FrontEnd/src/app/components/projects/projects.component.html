@@ -4,13 +4,13 @@
     <div class="project__container container">
         <div *ngFor="let Proyecto of proyecto">
             <div class="project__content grid">
-                <img src="../../../assets/img/{{Proyecto.imgP}}.jpg" [ngClass]="{'project__img':Proyecto.imgP}">
+                <img src="../../../assets/img/{{Proyecto.imgP}}.jpg" class="project__img" [ngClass]="{'project__shadow':Proyecto.imgP}">
     
                 <div class="project__data">
                     <h3 class="project__title">{{Proyecto.tituloP}}</h3>
                     <div class="project__description">
                         <p class="project__description">{{Proyecto.descripcionP}}</p>
-                        <div class="description__icons" *ngIf="isLogged">
+                        <div class="description__icons">
                             <a class="btn edit" href="{{Proyecto.linkP}}">
                                 <i class="uil uil-github" ></i>
                             </a>
