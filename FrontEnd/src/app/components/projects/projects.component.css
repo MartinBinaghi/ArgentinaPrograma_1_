@@ -5,7 +5,7 @@
 
 .project__content {
     padding: 0 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .project__img{
@@ -26,7 +26,7 @@
 .project__description{
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: 95%;
     word-break: break-word;
 }
 
