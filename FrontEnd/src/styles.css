@@ -422,11 +422,13 @@ img {
 
 .experience__title{
   font-size: var(--h3-font-size);
+  word-break: break-word;
 }
 
 .experience__subtitle{
   font-size: var(--small-font-size);
   color: var(--text-color-light);
+  word-break: break-word;
 }
 
 .experience__arrow{
