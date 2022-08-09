@@ -41,7 +41,7 @@ export class EditSkillComponent implements OnInit {
       },
       error: (err) => {
         alert('Error al editar habilidad');
-        this.router.navigate(['newskill']);
+        this.router.navigate(['/editskill/' + id]);
       },
     });
   }

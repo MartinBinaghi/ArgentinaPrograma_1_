@@ -42,7 +42,7 @@ export class EditEducacionComponent implements OnInit {
       },
       error: (err) => {
         alert('Error al editar educacion');
-        this.router.navigate(['newedu']);
+        this.router.navigate(['/editedu/' + id]);
       },
     });
   }

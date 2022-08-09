@@ -41,7 +41,7 @@ export class EditAboutMeComponent implements OnInit {
       },
       error: (err) => {
         alert('Error al editar persona');
-        this.router.navigate(['newabt']);
+        this.router.navigate(['/editabout/' + id]);
       },
     });
   }

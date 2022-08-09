@@ -1,65 +1,69 @@
 .circle__container{
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 }
 
 .row{
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 }
 
 .skills__container{
-    row-gap: 0;
+row-gap: 0;
 }
 
 .btn {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 1.5rem;
-    background-color: var(--first-color);
-    color: #fff;
-    border: none;
-    padding: 5px 5px;
-    margin: 0.5rem 0.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: inherit;
-  }
-  .btn:focus {
-    outline: none;
-  }
-  .btn:active {
-    transform: scale(0.98);
-  }
-  .btn:hover {
-    background-color: var(--first-color-alt);
-  }
-  .btn-block {
-    display: block;
-    width: 100%;
-  }
-  
-  .description__icons{
-    width: 100%;
-    height: 2.5rem;
-    display: flex;
-    justify-content: space-around;;
-  }
-  
-  .edit, .delete{
-    display: flex;
-  }
-  
-  .delete{
-    background-color: indianred;
-  }
-  
-  .delete:hover {
-    background-color: darkred;
-  }
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 1.5rem;
+  background-color: var(--first-color);
+  color: #fff;
+  border: none;
+  padding: 5px 5px;
+  margin: 0.5rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn:hover {
+  background-color: var(--first-color-alt);
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.description__icons{
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-around;;
+}
+
+.edit, .delete{
+  display: flex;
+}
+
+.delete{
+  background-color: indianred;
+}
+
+.delete:hover {
+  background-color: darkred;
+}
+
+.add{
+  margin:1rem 2.5rem;
+}
 

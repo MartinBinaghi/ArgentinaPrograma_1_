@@ -40,7 +40,7 @@ export class EditProyectoComponent implements OnInit {
       },
       error: (err) => {
         alert('Error al editar proyecto');
-        this.router.navigate(['newproyecto']);
+        this.router.navigate(['/editproyecto/' + id]);
       },
     });
   }
